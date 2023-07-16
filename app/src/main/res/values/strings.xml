@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Shoe Store Inventory</string>
+    <string name="details_shoe">Details Shoe</string>
+    <string name="id_shoe">ID Shoe:</string>
+    <string name="name_shoe">Name Shoe:</string>
+    <string name="size_shoe">Size Shoe:</string>
+    <string name="quantity_shoe">Quantity Shoe:</string>
+    <string name="save">Save</string>
+    <string name="id_of_shoe">Please type id shoe</string>
+    <string name="name_of_shoe">Please type name shoe</string>
+    <string name="size_of_shoe">Please type size shoe</string>
+    <string name="quantity_of_shoe">Please type quantity shoe</string>
+    <string name="start">Let\'s go</string>
+    <string name="next">Next</string>
+    <string name="please_enter_user_name">Please enter user name</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="login">Login</string>
+    <string name="plus">Plus</string>
+    <string name="quantity_count">Quantity Count</string>
+    <string name="size_shoe_text">Size Shoe</string>
+    <string name="name_shoe_text">Name Shoe</string>
+    <string name="next_page">Next</string>
+    <string name="welcome_onboarding_fragment">Welcome onboarding fragment</string>
+    <string name="welcome_instruction_onboarding_fragment">Welcome instruction onboarding fragment</string>
+</resources>

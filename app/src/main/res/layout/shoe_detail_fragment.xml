@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/details_shoe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_id_shoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/id_shoe"
+            app:layout_constraintBottom_toBottomOf="@id/edt_id_shoe"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_details" />
+
+        <EditText
+            android:id="@+id/edt_id_shoe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="50dp"
+            android:hint="@string/id_of_shoe"
+            android:layout_marginEnd="50dp"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@id/tv_id_shoe"
+            app:layout_constraintStart_toEndOf="@id/tv_id_shoe"
+            app:layout_constraintTop_toBottomOf="@id/tv_details"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/tv_name_shoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/name_shoe"
+            app:layout_constraintBottom_toBottomOf="@id/edt_name_shoe"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_id_shoe" />
+
+        <EditText
+            android:id="@+id/edt_name_shoe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:hint="@string/name_of_shoe"
+            android:inputType="text"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name_shoe"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/tv_size_shoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/size_shoe"
+            app:layout_constraintBottom_toBottomOf="@id/edt_size_shoe"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_shoe" />
+
+        <EditText
+            android:id="@+id/edt_size_shoe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:hint="@string/size_of_shoe"
+            android:inputType="number"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_size_shoe"
+            app:layout_constraintStart_toEndOf="@id/tv_size_shoe"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/quantity_shoe"
+            app:layout_constraintBottom_toBottomOf="@id/edt_quantity"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_size_shoe" />
+
+        <EditText
+            android:id="@+id/edt_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:hint="@string/quantity_of_shoe"
+            android:inputType="number"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_quantity"
+            app:layout_constraintStart_toEndOf="@id/tv_quantity"
+            android:autofillHints="" />
+
+
+        <Button
+            android:id="@+id/save_new_shoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
