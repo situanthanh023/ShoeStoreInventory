@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.example.android.shoestoreinventory.screen.shoeListing.ShoeListingViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -40,13 +47,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="50dp"
-            android:hint="@string/company_of_shoe"
             android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:hint="@string/company_of_shoe"
             android:inputType="text"
+            android:text="@={shoe.companyShoe}"
             app:layout_constraintBottom_toBottomOf="@id/tv_company_shoe"
             app:layout_constraintStart_toEndOf="@id/tv_company_shoe"
-            app:layout_constraintTop_toBottomOf="@id/tv_details"
-            android:autofillHints="" />
+            app:layout_constraintTop_toBottomOf="@id/tv_details" />
 
         <TextView
             android:id="@+id/tv_name_shoe"
@@ -64,13 +72,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
-            android:hint="@string/name_of_shoe"
-            android:inputType="text"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:hint="@string/name_of_shoe"
+            android:inputType="text"
+            android:text="@={shoe.nameShoe}"
             app:layout_constraintBottom_toBottomOf="@id/tv_name_shoe"
-            app:layout_constraintStart_toEndOf="@id/guideline"
-            android:autofillHints="" />
+            app:layout_constraintStart_toEndOf="@id/guideline" />
 
         <TextView
             android:id="@+id/tv_size_shoe"
@@ -88,20 +97,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
-            android:hint="@string/size_of_shoe"
-            android:inputType="number"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:hint="@string/size_of_shoe"
+            android:inputType="number"
+            android:text="@={shoe.sizeShoe}"
             app:layout_constraintBottom_toBottomOf="@id/tv_size_shoe"
-            app:layout_constraintStart_toEndOf="@id/tv_size_shoe"
-            android:autofillHints="" />
+            app:layout_constraintStart_toEndOf="@id/tv_size_shoe" />
 
         <TextView
             android:id="@+id/tv_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="@string/quantity_shoe"
+            android:text="@string/description_shoe"
             app:layout_constraintBottom_toBottomOf="@id/edt_description"
             app:layout_constraintEnd_toEndOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
@@ -112,13 +122,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
-            android:hint="@string/description_of_shoe"
-            android:inputType="text"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:hint="@string/description_of_shoe"
+            android:inputType="text"
+            android:text="@={shoe.description}"
             app:layout_constraintBottom_toBottomOf="@id/tv_description"
-            app:layout_constraintStart_toEndOf="@id/tv_description"
-            android:autofillHints="" />
+            app:layout_constraintStart_toEndOf="@id/tv_description" />
 
 
         <Button
@@ -128,9 +139,10 @@
             android:layout_marginBottom="50dp"
             android:text="@string/save"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.3"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
             app:layout_constraintStart_toStartOf="parent" />
+
         <Button
             android:id="@+id/cancel_new_shoe"
             android:layout_width="wrap_content"
@@ -138,8 +150,8 @@
             android:layout_marginBottom="50dp"
             android:text="@string/cancel"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

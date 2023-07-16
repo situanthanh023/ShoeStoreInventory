@@ -23,10 +23,8 @@ class InstructionsOnboardingFragment : Fragment() {
 
         binding.nextPage.setOnClickListener { view ->
             view.findNavController().navigate(
-                    InstructionsOnboardingFragmentDirections.actionInstructionsOnboardingFragmentToShoeListingFragment(
-                        null
-                    )
-                )
+                InstructionsOnboardingFragmentDirections.actionInstructionsOnboardingFragmentToShoeListingFragment()
+            )
         }
 
         return binding.root

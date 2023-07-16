@@ -25,15 +25,6 @@ class OnboardingFragment : Fragment() {
                 .navigate(OnboardingFragmentDirections.actionOnboardingFragmentToInstructionsOnboardingFragment())
         }
 
-//        binding.root.setOnKeyListener { v, keyCode, event ->
-//            {
-//                if( keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
-//
-//                    return true;
-//                }
-//            }
-//        }
-
         return binding.root
     }
 

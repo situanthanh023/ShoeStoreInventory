@@ -6,50 +6,38 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.android.shoestoreinventory.R
 import com.example.android.shoestoreinventory.databinding.ShoeDetailFragmentBinding
-import com.example.android.shoestoreinventory.model.Shoe
+import com.example.android.shoestoreinventory.screen.shoeListing.ShoeListingViewModel
 
 class ShoeDetailFragment : Fragment() {
 
     private lateinit var binding: ShoeDetailFragmentBinding
 
-
+    private val viewModel: ShoeListingViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.shoe_detail_fragment, container, false)
 
+        binding.shoe = viewModel
+
+        binding.lifecycleOwner = this
+
         binding.saveNewShoe.setOnClickListener { view ->
-            val name = binding.edtNameShoe.text.toString()
-            val size = binding.edtSizeShoe.text.toString()
-            val company = binding.edtCompanyShoe.text.toString()
-            val description = binding.edtDescription.text.toString()
-            if (name.isEmpty() || size.isEmpty() || company.isEmpty() || description.isEmpty()) {
-                view.findNavController().navigate(
-                    ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(
-                        null
-                    )
-                )
-            } else {
-                val shoe = Shoe(
-                    name, size.toInt(), company, description
-                )
-                view.findNavController().navigate(
-                    ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(
-                        shoe
-                    )
-                )
-            }
+            viewModel.updateListShoe()
+            view.findNavController().navigate(
+                ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment()
+            )
         }
 
         binding.cancelNewShoe.setOnClickListener { view ->
+            viewModel.resetData()
             view.findNavController().navigate(
-                ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(
-                    null
-                )
+                ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment()
             )
         }
 

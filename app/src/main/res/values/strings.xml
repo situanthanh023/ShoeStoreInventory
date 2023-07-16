@@ -4,7 +4,7 @@
     <string name="company_name_label">Company Name:</string>
     <string name="name_shoe">Name Shoe:</string>
     <string name="size_shoe">Size Shoe:</string>
-    <string name="quantity_shoe">Quantity Shoe:</string>
+    <string name="description_shoe">Description Shoe:</string>
     <string name="save">Save</string>
     <string name="company_of_shoe">Please type company name</string>
     <string name="name_of_shoe">Please type name shoe</string>
