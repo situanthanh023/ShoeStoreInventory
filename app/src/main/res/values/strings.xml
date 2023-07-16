@@ -25,4 +25,5 @@
     <string name="cancel">Cancel</string>
     <string name="register">Register</string>
     <string name="logout">Logout</string>
+    <string name="welcome_to_shop_shoe">Welcome to shop shoe</string>
 </resources>
