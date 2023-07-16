@@ -4,10 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="isLogin"
             type="com.example.android.shoestoreinventory.screen.login.LoginViewModel" />
     </data>
+
+    <!--    Screen and resolution have quick response-->
+    <!--    View has complex hierarchy-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

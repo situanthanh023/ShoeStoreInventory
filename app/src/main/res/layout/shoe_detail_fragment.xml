@@ -9,6 +9,9 @@
             type="com.example.android.shoestoreinventory.screen.shoeListing.ShoeListingViewModel" />
     </data>
 
+    <!--    Screen and resolution have quick response-->
+    <!--    View has complex hierarchy-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
