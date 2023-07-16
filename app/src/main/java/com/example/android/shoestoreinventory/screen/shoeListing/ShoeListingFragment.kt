@@ -69,7 +69,7 @@ class ShoeListingFragment : Fragment() {
 
         if (bindingShoe != null) {
             bindingShoe.nameShoe.text = shoe.name
-            bindingShoe.quantityShoe.text = shoe.count.toString()
+            bindingShoe.companyName.text = shoe.company
             bindingShoe.sizeShoe.text = shoe.size.toString()
         }
 

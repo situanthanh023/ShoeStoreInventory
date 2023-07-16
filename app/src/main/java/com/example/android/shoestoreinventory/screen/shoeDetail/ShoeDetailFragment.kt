@@ -23,15 +23,32 @@ class ShoeDetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.shoe_detail_fragment, container, false)
 
         binding.saveNewShoe.setOnClickListener { view ->
-            val shoe = Shoe(
-                binding.edtIdShoe.text.toString(),
-                binding.edtNameShoe.text.toString(),
-                binding.edtSizeShoe.text.toString().toInt(),
-                binding.edtQuantity.text.toString().toInt()
-            )
+            val name = binding.edtNameShoe.text.toString()
+            val size = binding.edtSizeShoe.text.toString()
+            val company = binding.edtCompanyShoe.text.toString()
+            val description = binding.edtDescription.text.toString()
+            if (name.isEmpty() || size.isEmpty() || company.isEmpty() || description.isEmpty()) {
+                view.findNavController().navigate(
+                    ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(
+                        null
+                    )
+                )
+            } else {
+                val shoe = Shoe(
+                    name, size.toInt(), company, description
+                )
+                view.findNavController().navigate(
+                    ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(
+                        shoe
+                    )
+                )
+            }
+        }
+
+        binding.cancelNewShoe.setOnClickListener { view ->
             view.findNavController().navigate(
                 ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(
-                    shoe
+                    null
                 )
             )
         }

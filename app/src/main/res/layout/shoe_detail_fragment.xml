@@ -24,27 +24,27 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_id_shoe"
+            android:id="@+id/tv_company_shoe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="@string/id_shoe"
-            app:layout_constraintBottom_toBottomOf="@id/edt_id_shoe"
+            android:text="@string/company_name_label"
+            app:layout_constraintBottom_toBottomOf="@id/edt_company_shoe"
             app:layout_constraintEnd_toEndOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_details" />
 
         <EditText
-            android:id="@+id/edt_id_shoe"
+            android:id="@+id/edt_company_shoe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="50dp"
-            android:hint="@string/id_of_shoe"
+            android:hint="@string/company_of_shoe"
             android:layout_marginEnd="50dp"
             android:inputType="text"
-            app:layout_constraintBottom_toBottomOf="@id/tv_id_shoe"
-            app:layout_constraintStart_toEndOf="@id/tv_id_shoe"
+            app:layout_constraintBottom_toBottomOf="@id/tv_company_shoe"
+            app:layout_constraintStart_toEndOf="@id/tv_company_shoe"
             app:layout_constraintTop_toBottomOf="@id/tv_details"
             android:autofillHints="" />
 
@@ -57,7 +57,7 @@
             app:layout_constraintBottom_toBottomOf="@id/edt_name_shoe"
             app:layout_constraintEnd_toEndOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_id_shoe" />
+            app:layout_constraintTop_toBottomOf="@id/tv_company_shoe" />
 
         <EditText
             android:id="@+id/edt_name_shoe"
@@ -97,27 +97,27 @@
             android:autofillHints="" />
 
         <TextView
-            android:id="@+id/tv_quantity"
+            android:id="@+id/tv_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="@string/quantity_shoe"
-            app:layout_constraintBottom_toBottomOf="@id/edt_quantity"
+            app:layout_constraintBottom_toBottomOf="@id/edt_description"
             app:layout_constraintEnd_toEndOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_size_shoe" />
 
         <EditText
-            android:id="@+id/edt_quantity"
+            android:id="@+id/edt_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
-            android:hint="@string/quantity_of_shoe"
-            android:inputType="number"
+            android:hint="@string/description_of_shoe"
+            android:inputType="text"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="50dp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_quantity"
-            app:layout_constraintStart_toEndOf="@id/tv_quantity"
+            app:layout_constraintBottom_toBottomOf="@id/tv_description"
+            app:layout_constraintStart_toEndOf="@id/tv_description"
             android:autofillHints="" />
 
 
@@ -128,6 +128,17 @@
             android:layout_marginBottom="50dp"
             android:text="@string/save"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/cancel_new_shoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
